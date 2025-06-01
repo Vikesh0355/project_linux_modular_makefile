@@ -1,4 +1,4 @@
-#!/bin/bash
+cl#!/bin/bash
 function greeting()
 {
   echo "Hello Good Morning!"
