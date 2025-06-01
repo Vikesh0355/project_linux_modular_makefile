@@ -1,0 +1,25 @@
+#!/bin/bash
+#while loop
+n=1
+while [ $n -le 10 ]
+do
+ echo "$n"
+ n=$(( n+1 ))
+ sleep 1
+done
+
+while read p
+do
+  echo $p
+ done < hello.sh
+ 
+ #until loop
+
+count=1
+
+until [ $count -gt 5 ]
+do
+  echo "Count is $count"
+  ((count++))
+done
+

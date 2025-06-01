@@ -1,0 +1,9 @@
+#!/bin/bash
+my_array=(apple banana cherry)
+echo "${my_array[0]}"  # apple
+echo "${my_array[1]}"  # banana
+my_array+=("date")
+echo "${#my_array[@]}"  # Number of elements
+echo "${!my_array[@]}"  # indexes  of elements
+
+

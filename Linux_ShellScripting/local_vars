@@ -1,0 +1,12 @@
+#!/bin/bash
+
+my_function() {
+  local name="Alice"
+  echo "Inside function: $name"
+}
+
+name="Bob"
+echo "Before function: $name"
+my_function
+echo "After function: $name"
+

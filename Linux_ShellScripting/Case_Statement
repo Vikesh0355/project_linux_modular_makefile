@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Enter and number between 1 and 3"
+read num
+case $num in
+    1)
+    echo "you selected one"
+    ;;
+    2)
+    echo "you selected two"
+    ;;
+    3)
+    echo "you selected three"
+    ;;
+    *)
+    echo "invalid case"
+    ;;
+ esac
+
