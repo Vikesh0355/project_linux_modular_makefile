@@ -181,3 +181,16 @@ https://github-am.geo.conti.de/ADAS/adcu_event_data_recorder/tree/master
 
 
 feature/ADC420HA33-5520/MesPartialStorageOfEvents_OnIgnitionOff
+
+
+To get your master branch updated with all committed changes on working, first push your commits on working:
+    git add ../Git_steps.txt
+    git commit -m "Update Git_steps.txt"
+    git push origin working
+
+
+Then switch to master and merge working:
+    git checkout master
+    git pull origin master      # make sure master is up-to-date
+    git merge working
+    git push origin master
