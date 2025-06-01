@@ -1,0 +1,74 @@
+1. Generate SSH Key (if not done already)
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    # Save key with a meaningful name, e.g., key_Git.txt
+    # Add passphrase (optional)
+
+2. Add SSH key to GitHub
+
+    Copy public key content:
+
+    cat ~/key_Git.txt.pub
+
+    Paste it into GitHub Settings > SSH and GPG keys > New SSH key
+
+3. Test SSH connection to GitHub
+    ssh -T git@github.com
+    You should see:
+    Hi your_github_username! You've successfully authenticated, but GitHub does not provide shell access.
+
+4. Initialize Git repo locally (in your project folder)
+
+    cd ~/project_linux_modular_makefile
+    git init
+    git add .
+    git commit -m "Initial commit of modular Makefile project"
+
+5. Create a new empty GitHub repository
+
+    Go to https://github.com/new
+
+    Repository name: project_linux_modular_makefile
+
+    Do not initialize with README or any files
+
+    Create repo
+
+6. Add GitHub remote
+
+    git remote add origin git@github.com:your_username/project_linux_modular_makefile.git
+    git remote -v  # Verify remote URL
+
+
+7. Push local branch to GitHub
+
+    Your local branch is likely master by default.
+
+    git push -u origin master 
+
+8. Check branches on GitHub
+
+    GitHub default branch might be main (empty)
+
+    Your files are in master branch locally and remotely
+
+9. Merge master into main branch locally
+
+    Fetch latest changes:
+
+    git fetch origin
+
+    Switch to main branch:
+    git checkout main
+    # If 'main' does not exist locally:
+    # git checkout -b main origin/main
+    
+10. Push merged main branch to GitHub
+    git push origin main
+
+11. Add .gitignore
+
+    Create .gitignore file to avoid committing build files:
+    echo -e "*.o\n*.d\nmy_project\ntest/test_main\n.vscode/" > .gitignore
+    git add .gitignore
+    git commit -m "Add .gitignore"
+    git push
