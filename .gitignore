@@ -1,0 +1,5 @@
+*.o
+*.d
+my_project
+test/test_main
+.vscode/
