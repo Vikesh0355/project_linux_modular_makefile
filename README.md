@@ -1,1 +1,4 @@
-# project_linux_modular_makefile
+# Modular Linux Makefile Project
+
+This is my project with modular makefiles.
+
