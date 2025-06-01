@@ -72,3 +72,112 @@
     git add .gitignore
     git commit -m "Add .gitignore"
     git push
+
+12. To check which Git branch you’re currently on, just run:
+    git branch
+
+    master
+    * working   : Here, working is your current branch.
+    feature-x
+
+*****************Git commands for project level****************
+git init (To initialize an empty git repository)
+
+ls -a (list out all folder in the directory)
+
+tree
+
+mkdir <dir-name> (To create a new directory)
+
+cat <file-name> (Read the content of the file and print in stdout)
+
+touch <file-name> (To create an empty file)
+from git bash
+$ echo $USER
+$ echo $HOME
+$ WHOAMI
+
+from cmd
+ set
+To see environmental variables:
+rundll32.exe sysdm.cpl,EditEnvironmentVariables
+
+git checkout develop/M51.00a_V1 (To checkout feature branch)
+
+git status(show the changes done locally)
+
+git add path (It will add that path)
+
+git submodule update --init --recursive (Clone all the submodules of the repo from Github server)
+develop-ha22_sop2_r70--nightly-bld [adcu_proj_ha22 » _admin] [Jenkins] (conti.de)=>Sop2 Ha22
+
+git clone git@github-am.geo.conti.de:ADAS/adcu_proj_ha22.git (Clone a repository from the github cloud server)
+
+git branch -b feature/ADC420HA33_XXXX
+
+git submodule foreach git clean -xdf
+git reset --hard
+git submodule update --init --recursive 
+
+git submodule sync
+conan remove --locks
+
+How to reset local changes and get a fresh repo:
+Step1: $ git checkout thebranch
+
+Step2: $ git reset --hard origin/thebranch
+
+Step3: $ git status
+
+Step4: $ git checkout thebranch
+Already on 'thebranch'
+
+$ git clone git@github-am.geo.conti.de:ADAS/adcu_proj_ha22 --branch develop/HA22_SOP2_R70
+$ git clone git@github-am.geo.conti.de:ADAS/adcu_proj_ha22 --branch develop/M61.00_V2
+
+git reset --hard develop/M60.00_V2
+
+***chekout at master****
+git checkout .
+git checkout master
+git checkout develop/HA22_SOP2_R70
+git branch --set-upstream-to=origin/master=> for git pull at master
+git checkout develop/master
+
+
+How to commit files:
+git status
+git checkout -b feature/ADC420HA22-16523/Test --> New feature branch 
+git status
+git add
+git commit
+git push --set-upstream origin feature/ADC420HA22-16523/UnderVoltage_ExtDiagRoutineRequest_IssueFix --> Push the changes to the master branch (Reviewer approval is required)
+
+
+
+git status
+git checkout -b feature/ADC420HA22-18103/ImplementDatation_Acquisition_SRDMDataPart2 --> New feature branch 
+git status
+git add
+git commit
+git push --set-upstream origin feature/ADC420HA22-18103/ImplementDatation_Acquisition_SRDMDataPart2  --> Push the changes to the master branch (Reviewer approval is required)
+
+
+git checkout -b feature/ADC420HA33-5832/Implementation_CFFID_Block_AAA1_For_CDW_Variant_02
+
+git push --set-upstream origin feature/ADC420HA33-5832/Implementation_CFFID_Block_AAA1_For_CDW_Variant_02
+
+
+git checkout -b feature/ADC420HA22-18252/SRDM_TimeSeries_Not_Updated
+git push --set-upstream origin feature/ADC420HA22-18252/SRDM_TimeSeries_Not_Updated
+
+git checkout -b feature/ADC420HA33-5827/Generic_Periodicity_EDR
+git push --set-upstream origin feature/ADC420HA33-5827/Generic_Periodicity_EDR
+https://github-am.geo.conti.de/ADAS/adcu_event_data_recorder/pull/217
+
+
+
+https://github-am.geo.conti.de/ADAS/adcu_event_data_recorder/tree/master
+
+
+feature/ADC420HA33-5520/MesPartialStorageOfEvents_OnIgnitionOff
